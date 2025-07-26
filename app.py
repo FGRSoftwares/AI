@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
-CAMINHO_BANCO = r"C:\Users\ferna\OneDrive\FGR\B1Construction\AI\b1-chat-frontend-final\BD\banco_clientes_completo.db"
+CAMINHO_BANCO = os.path.join(os.path.dirname(__file__), 'banco_clientes_completo.db')
 
 @app.route('/pergunta', methods=['POST', 'OPTIONS'])
 @cross_origin()
